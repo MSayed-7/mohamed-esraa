@@ -1,0 +1,160 @@
+<!DOCTYPE HTML>
+<html>
+	<style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            background: linear-gradient(to right, #f0f0ee, #ffffff);
+            color: rgb(108, 108, 107);
+            padding: 0;
+            direction: ltr; /* اجعلها rtl للعربية */
+        }
+
+        h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        #countdown {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            font-size: 20px;
+        }
+
+        .time-box {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            min-width: 100px;
+            text-align: center;
+        }
+
+        .time-box span {
+            display: block;
+            font-size: 35px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .label {
+            font-size: 14px;
+            text-transform: uppercase;
+            opacity: 0.8;
+        }
+    </style>
+	<head>
+		<title>Mohamed & Esraa</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bonheur+Royale&display=swap" rel="stylesheet">
+
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper" class="fade-in">
+
+				<!-- Intro -->
+					<div id="intro">
+						<h1>Mohamed<br />
+							& Esraa</h1>
+							<h2>wedding Party</h2>
+							<h2>  1 April 2025 <br /> Tuesday, 03:00 PM</h2>
+
+					
+						<ul class="actions">
+							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
+						</ul>
+					</div>
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Mohamed & Esraa wedding invetation</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li class="active"><a href="index.html">Remaining</a></li>
+							<li><a href="generic.html">Location</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="https://www.facebook.com/mohmmedsayed1994" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="https://www.instagram.com/mohamed.sayed.mm/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Featured Post -->
+							<article class="post featured">
+								<header class="major">
+									<span class="date">April 1, 2025</span>
+									<div id="countdown">
+										<div class="time-box">
+											<span id="months">00</span>
+											<div class="label">Months</div>
+										</div>
+										<div class="time-box">
+											<span id="days">00</span>
+											<div class="label">Days</div>
+										</div>
+										<div class="time-box">
+											<span id="hours">00</span>
+											<div class="label">Hours</div>
+										</div>
+										<div class="time-box">
+											<span id="minutes">00</span>
+											<div class="label">Minutes</div>
+										</div>
+										<div class="time-box">
+											<span id="seconds">00</span>
+											<div class="label">Seconds</div>
+										</div>
+									</div>
+								
+									<script>
+										function updateCountdown() {
+											const targetDate = new Date("2025-04-01T15:00:00").getTime();
+											const now = new Date().getTime();
+											const timeLeft = targetDate - now;
+								
+											if (timeLeft > 0) {
+												document.getElementById("months").textContent = Math.floor(timeLeft / (1000 * 60 * 60 * 24 * 30));
+												document.getElementById("days").textContent = Math.floor((timeLeft % (1000 * 60 * 60 * 24 * 30)) / (1000 * 60 * 60 * 24));
+												document.getElementById("hours").textContent = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+												document.getElementById("minutes").textContent = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+												document.getElementById("seconds").textContent = Math.floor((timeLeft % (1000 * 60)) / 1000);
+											} else {
+												document.getElementById("countdown").innerHTML = "<h3>Time is up!</h3>";
+											}
+										}
+								
+										setInterval(updateCountdown, 1000);
+										updateCountdown();
+									</script>
+									
+								</header>
+								<a href="#" class="image main"><img src="images/pic011.jpg" alt="" /></a>
+							</article>
+
+
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
